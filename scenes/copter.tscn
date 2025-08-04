@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://cob8katwlrf0v"]
+
+[ext_resource type="Texture2D" uid="uid://dnnmxoj15derk" path="res://copter.png" id="1_rkc4h"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lgper"]
+radius = 118.828
+
+[node name="Copter" type="CharacterBody2D"]
+position = Vector2(6, 22)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(594, 284)
+scale = Vector2(0.407217, 0.581197)
+texture = ExtResource("1_rkc4h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(607, 288)
+shape = SubResource("CircleShape2D_lgper")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(610, 303)

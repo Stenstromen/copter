@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://dvigwx2xh578v"]
+
+[ext_resource type="PackedScene" uid="uid://cob8katwlrf0v" path="res://scenes/copter.tscn" id="1_nnsk1"]
+[ext_resource type="Script" uid="uid://uifyj7y76221" path="res://scripts/copter.gd" id="2_rwgxs"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_nnsk1"]
+size = Vector2(1000, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rwgxs"]
+size = Vector2(997, 98)
+
+[node name="World" type="Node2D"]
+
+[node name="Copter" parent="." instance=ExtResource("1_nnsk1")]
+position = Vector2(-80, 12)
+script = ExtResource("2_rwgxs")
+
+[node name="Platform" type="StaticBody2D" parent="."]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Platform"]
+position = Vector2(524, 518)
+mesh = SubResource("QuadMesh_nnsk1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
+position = Vector2(524.5, 516)
+shape = SubResource("RectangleShape2D_rwgxs")
