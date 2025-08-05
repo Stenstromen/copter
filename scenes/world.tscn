@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cob8katwlrf0v" path="res://scenes/copter.tscn" id="1_nnsk1"]
 [ext_resource type="Script" uid="uid://uifyj7y76221" path="res://scripts/copter.gd" id="2_rwgxs"]
-[ext_resource type="PackedScene" uid="uid://c8q1q8mdyv46f" path="res://scenes/platform.tscn" id="3_4wyf3"]
+[ext_resource type="PackedScene" uid="uid://csbvtvgvte1m4" path="res://scenes/platform.tscn" id="3_4wyf3"]
 [ext_resource type="PackedScene" uid="uid://beeg7q13qygso" path="res://scenes/start_platform.tscn" id="4_k0juu"]
 
 [sub_resource type="GDScript" id="GDScript_k0juu"]
@@ -15,12 +15,13 @@ position = Vector2(50, -9)
 script = ExtResource("2_rwgxs")
 
 [node name="Platform" parent="." instance=ExtResource("3_4wyf3")]
-position = Vector2(761, 6)
+position = Vector2(760, 254)
 
 [node name="Platform2" parent="." instance=ExtResource("3_4wyf3")]
-position = Vector2(763, -443)
+position = Vector2(759, -632)
 
 [node name="StartPlatform" parent="." instance=ExtResource("4_k0juu")]
+position = Vector2(-10, -360)
 
 [node name="StartPlatform2" parent="." instance=ExtResource("4_k0juu")]
-position = Vector2(-1, 450)
+position = Vector2(-7, 517)

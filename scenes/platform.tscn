@@ -1,22 +1,26 @@
-[gd_scene load_steps=4 format=3 uid="uid://c8q1q8mdyv46f"]
+[gd_scene load_steps=5 format=3 uid="uid://csbvtvgvte1m4"]
 
 [ext_resource type="Script" uid="uid://drmfu11dn23x5" path="res://scripts/platform.gd" id="1_ba0x2"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_nnsk1"]
 size = Vector2(1000, 100)
 
+[sub_resource type="MeshTexture" id="MeshTexture_ba0x2"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rwgxs"]
-size = Vector2(223, 48)
+size = Vector2(223, 335)
 
 [node name="Platform" type="StaticBody2D"]
 script = ExtResource("1_ba0x2")
 copter_path = NodePath("../Copter")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
-position = Vector2(435.5, 518)
-scale = Vector2(0.221, 0.44)
+modulate = Color(0, 1, 0, 1)
+position = Vector2(426.5, 481)
+scale = Vector2(0.221, 3.36)
 mesh = SubResource("QuadMesh_nnsk1")
+texture = SubResource("MeshTexture_ba0x2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(434.5, 519)
+position = Vector2(425.5, 479.5)
 shape = SubResource("RectangleShape2D_rwgxs")

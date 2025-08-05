@@ -2,20 +2,20 @@
 
 [sub_resource type="QuadMesh" id="QuadMesh_4wyf3"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_k0juu"]
+[sub_resource type="CanvasTexture" id="CanvasTexture_564f6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4wyf3"]
-size = Vector2(1077, 46)
+size = Vector2(1077, 325)
 
 [node name="StartPlatform" type="StaticBody2D"]
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
-modulate = Color(1, 0.94902, 0.00784314, 1)
-position = Vector2(547.125, 75.5)
-scale = Vector2(1076.25, 45)
+modulate = Color(0, 1, 0, 1)
+position = Vector2(544, 218)
+scale = Vector2(1076.25, 324)
 mesh = SubResource("QuadMesh_4wyf3")
-texture = SubResource("ViewportTexture_k0juu")
+texture = SubResource("CanvasTexture_564f6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(546.5, 76)
+position = Vector2(546.5, 215.5)
 shape = SubResource("RectangleShape2D_4wyf3")
